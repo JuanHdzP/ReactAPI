@@ -8,12 +8,14 @@ import {
 import Crudproductos from "../pages/Crudproductos";
 import Altaproducto from "../pages/Altaproducto";
 import Detalleproducto from "../pages/Detalleproducto";
+import Modificaproducto from "../pages/Modificaproducto";
 import Eliminaproducto from "../pages/Eliminaproducto";
-import Crudcategorias from "../pages/Crudcategorias";
 import Altacategoria from "../pages/Altacategoria";
 import Crudtypeusers from "../pages/Crudtypeusers";
 import Altatypeuser from "../pages/Altatypeuser";
 import Eliminatypeuser from "../pages/Eliminatypeuser";
+import Crudcategorias from "../pages/Crudcategorias";
+import Modificacategoria from "../pages/Modificacategoria";
 import Eliminacategoria from "../pages/Eliminacategoria";
 import Crudventas from "../pages/Crudventas";
 import Altaventa from "../pages/Altaventa";
@@ -36,9 +38,11 @@ function Aplicacion(){
                 <Route exact path="/Crudproductos" component={Crudproductos}/>   
                 <Route exact path="/Altaproducto" component={Altaproducto}/>   
                 <Route exact path="/Detalleproducto" component={Detalleproducto}/>   
+                <Route exact path="/Modificaproducto" component={Modificaproducto}/>   
                 <Route exact path="/Eliminaproducto" component={Eliminaproducto}/>   
                 <Route exact path="/Crudcategorias" component={Crudcategorias}/>   
                 <Route exact path="/Altacategoria" component={Altacategoria}/>   
+                <Route exact path="/Modificacategoria" component={Modificacategoria}/>   
                 <Route exact path="/Eliminacategoria" component={Eliminacategoria}/>   
                 <Route exact path="/Crudtypeusers" component={Crudtypeusers}/>   
                 <Route exact path="/Altatypeuser" component={Altatypeuser}/>   

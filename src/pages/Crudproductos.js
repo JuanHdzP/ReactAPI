@@ -42,6 +42,9 @@ class Crudproductos extends React.Component{
                         <td>
                         <Link to={{pathname:'/Detalleproducto', state:{id:producto.id}}}>
                         <button type='button' className='btn btn-primary'>Detalle</button>
+                        </Link>                        
+                        <Link to={{pathname:'/Modificaproducto', state:{id:producto.id}}}>
+                        <button type='button' className='btn btn-dark'>Modificar</button>
                         </Link>
                         <Link to={{pathname:'/Eliminaproducto', state:{id:producto.id}}}>
                         <button type='button' className='btn btn-danger'>Eliminar</button>

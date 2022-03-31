@@ -40,6 +40,9 @@ class Crudcategorias extends React.Component{
                         <Link to={{pathname:'/Eliminacategoria', state:{id:categoria.id}}}>
                         <button type='button' className='btn btn-danger'>Eliminar</button>
                         </Link>
+                        <Link to={{pathname:'/Modificacategoria', state:{id:categoria.id}}}>
+                        <button type='button' className='btn btn-dark'>Modificar</button>
+                        </Link>                       
                         </td>
                                             
                     </tr>
@@ -55,9 +58,7 @@ class Crudcategorias extends React.Component{
                             <div className='card'>
                                 <div className='card-header'>
                                     <h4>Gestion de categorias
-                                    <Link to={{pathname:'/Altacategoria'}}>
-                                    <button type='button' className='btn btn-success float-end'>Agregar</button>
-                                    </Link>
+                                        <Link to={'add-categoria'} className="btn btn-primary float-end">Agregar</Link>
                                     </h4>
                                 </div>
                                 <div className='card-body'>
