@@ -35,7 +35,12 @@ class Crudtypeusers extends React.Component{
                 return (
                     <tr key={i}>
                         <th scope="row">{i+1}</th>
-                        <td>{typeuser.nombre}</td>                        
+                        <td>{typeuser.nombre}</td>  
+                        <td>
+                        <Link to={{pathname:'/Eliminatypeuser', state:{id:typeuser.id}}}>
+                        <button type='button' className='btn btn-danger'>Eliminar</button>
+                        </Link>
+                        </td>                      
                     </tr>
                 );
             });
@@ -44,13 +49,14 @@ class Crudtypeusers extends React.Component{
 
         return(
             <div>
+                <center>
+
                 <div className='container'>
-                    <div className='row'>
-                        <div className='col-md-12'>
+                        <div className='col-md-5'>
                             <div className='card'>
                                 <div className='card-header'>
                                     <h4>Gestion de tipos de usuario
-                                        <Link to={'add-typeuser'} className="btn btn-primary float-end">Agregar tipo de usuario</Link>
+                                        <Link to={'add-typeuser'} className="btn btn-primary float-end">Agregar</Link>
                                     </h4>
                                 </div>
                                 <div className='card-body'>
@@ -59,6 +65,7 @@ class Crudtypeusers extends React.Component{
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nombre</th>
+                            <th scope="col">Opciones</th>
                             
                         </tr>
                         </thead>
@@ -70,7 +77,7 @@ class Crudtypeusers extends React.Component{
                             </div>
                         </div>                        
                     </div>
-                </div>
+                </center>
             </div>
         )
     }

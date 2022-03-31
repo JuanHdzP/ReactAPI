@@ -38,13 +38,12 @@ class Crudproductos extends React.Component{
                         <td><img src={producto.foto} className="rounded" height='80' width='80' alt='foto producto'/></td>
                         <td>{producto.nombre}</td>
                         <td>{producto.precio}</td>
-                        <td>{producto.descripcion}</td>
                         <td>{producto.categoriaproducto}</td>
                         <td>
-                        <Link to={{pathname:'/Cruddetalle', state:{id:producto.id}}}>
+                        <Link to={{pathname:'/Detalleproducto', state:{id:producto.id}}}>
                         <button type='button' className='btn btn-primary'>Detalle</button>
                         </Link>
-                        <Link to={{pathname:'/Crudelimina', state:{id:producto.id}}}>
+                        <Link to={{pathname:'/Eliminaproducto', state:{id:producto.id}}}>
                         <button type='button' className='btn btn-danger'>Eliminar</button>
                         </Link>
                         </td>    
@@ -62,7 +61,7 @@ class Crudproductos extends React.Component{
                             <div className='card'>
                                 <div className='card-header'>
                                     <h4>Gestion de productos
-                                        <Link to={'add-producto'} className="btn btn-primary float-end">Agregar producto</Link>
+                                        <Link to={'add-producto'} className="btn btn-primary float-end">Agregar</Link>
                                     </h4>
                                 </div>
                                 <div className='card-body'>
@@ -73,7 +72,6 @@ class Crudproductos extends React.Component{
                             <th scope="col">Foto</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Precio</th>
-                            <th scope="col">Descripcion</th>
                             <th scope="col">Categoria</th>
                             <th scope="col">Opciones</th>
 

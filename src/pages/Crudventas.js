@@ -34,11 +34,16 @@ class Crudventas extends React.Component{
             this.state.ventas.map((venta,i)=>{
                 return (
                     <tr key={i}>
-                        <th scope="row">{i+1}</th>
+                        <th scope="row">{venta.id}</th>
                         <td>{venta.fecha}</td>
                         <td>{venta.total}</td>
                         <td>{venta.cliente}</td>
                         <td>{venta.empleado}</td>
+                        <td>
+                        <Link to={{pathname:'/Eliminaventa', state:{id:venta.id}}}>
+                        <button type='button' className='btn btn-danger'>Eliminar</button>
+                        </Link>
+                        </td>  
                     </tr>
                 );
             });
@@ -53,18 +58,19 @@ class Crudventas extends React.Component{
                             <div className='card'>
                                 <div className='card-header'>
                                     <h4>Gestion de ventas
-                                        <Link to={'add-venta'} className="btn btn-primary float-end">Agregar venta</Link>
+                                        <Link to={'add-venta'} className="btn btn-primary float-end">Agregar</Link>
                                     </h4>
                                 </div>
                                 <div className='card-body'>
                                 <table className="table table-striped table-border table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">Num venta</th>
                             <th scope="col">Fecha</th>
                             <th scope="col">Total</th>
                             <th scope="col">Cliente</th>
                             <th scope="col">Empleado</th>
+                            <th scope="col">Opciones</th>
 
                         </tr>
                         </thead>

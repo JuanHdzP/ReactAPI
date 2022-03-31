@@ -8,15 +8,19 @@ import {
 import Crudproductos from "../pages/Crudproductos";
 import Crudcategorias from "../pages/Crudcategorias";
 import Crudtypeusers from "../pages/Crudtypeusers";
-import Cruddetalle from "../pages/Cruddetalle";
-import Crudelimina from "../pages/Crudelimina";
-import Crudusers from "../pages/Crudusers";
+import Detalleproducto from "../pages/Detalleproducto";
+import Eliminaproducto from "../pages/Eliminaproducto";
+import Eliminacategoria from "../pages/Eliminacategoria";
+import Eliminatypeuser from "../pages/Eliminatypeuser";
 import Crudventas from "../pages/Crudventas";
-  import Navbar from "./Navbar";
+import Eliminaventa from "../pages/Eliminaventa";
+import Crudusers from "../pages/Crudusers";
+import Detalleuser from "../pages/Detalleuser";
+import Eliminauser from "../pages/Eliminauser";
+import Navbar from "./Navbar";
 import Login from "../pages/Login"; 
 import Register from "../pages/Register"; 
 import Inicio from "../pages/Inicio";
-import Contacto from "../pages/Contacto"
 
 function Aplicacion(){
     return(
@@ -24,14 +28,18 @@ function Aplicacion(){
                 <Navbar/>
             <Switch>
                 <Route exact path="/" component={Inicio}/>   
-                <Route exact path="/Contacto" component={Contacto}/>   
                 <Route exact path="/Crudproductos" component={Crudproductos}/>   
+                <Route exact path="/Detalleproducto" component={Detalleproducto}/>   
+                <Route exact path="/Eliminaproducto" component={Eliminaproducto}/>   
                 <Route exact path="/Crudcategorias" component={Crudcategorias}/>   
+                <Route exact path="/Eliminacategoria" component={Eliminacategoria}/>   
                 <Route exact path="/Crudtypeusers" component={Crudtypeusers}/>   
-                <Route exact path="/Crudusers" component={Crudusers}/>   
+                <Route exact path="/Eliminatypeuser" component={Eliminatypeuser}/>   
                 <Route exact path="/Crudventas" component={Crudventas}/>   
-                <Route exact path="/Cruddetalle" component={Cruddetalle}/>   
-                <Route exact path="/Crudelimina" component={Crudelimina}/>   
+                <Route exact path="/Eliminaventa" component={Eliminaventa}/>   
+                <Route exact path="/Crudusers" component={Crudusers}/>   
+                <Route exact path="/Detalleuser" component={Detalleuser}/>   
+                <Route exact path="/Eliminauser" component={Eliminauser}/>   
                 <Route exact path="/Login" component={Login}/>   
                 <Route exact path="/Register" component={Register}/>   
                 <Route component={Noexiste}/>   

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class Cruddetalle extends React.Component{
+class Eliminaproducto extends React.Component{
     state={
         productos:[]
     }
@@ -10,19 +10,24 @@ class Cruddetalle extends React.Component{
         fetch('http://127.0.0.1:8000/api/productos/'+this.props.location.state.id)
         .then(response=>response.json())
         .then(productosJson=>this.setState({productos:productosJson}))
+        
+        
+        fetch('http://127.0.0.1:8000/api/productos/'+this.props.location.state.id,
+        {method:'delete'});
     }
 
     render(){
-        const {productos}=this.state
         return(
             <div>
-                <div><h2>Detalle del producto</h2></div>
-                <img src={productos.foto} className="img-thumbnail" height="200" width="200" alt="foto producto"/>
+                <div><h2>Elimina producto</h2></div>
                 <br/>
-                Nombre: {productos.nombre}
-                <br/>
-                Precio: {productos.precio}
-                <br/>
+                <div className="alert alert-success">
+                <center><strong>Successs!!</strong>
+                    <br/>
+                 El producto <strong>{this.state.productos.nombre}</strong>
+                    <br/>
+                    ha sido eliminado correctamente.</center>
+                </div>
                 <div>
                     <Link to = "/Crudproductos">
                         <button type="button" className="btn btn-success">Volver</button>
@@ -32,4 +37,4 @@ class Cruddetalle extends React.Component{
         )
     }
 }
-export default Cruddetalle
+export default Eliminaproducto

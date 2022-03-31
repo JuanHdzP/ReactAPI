@@ -38,9 +38,16 @@ class Crudusers extends React.Component{
                         <td><img src={user.img_perfil} className="rounded" height='80' width='80' alt='foto usuario'/></td>
                         <td>{user.name}</td>
                         <td>{user.email}</td>
-                        <td>{user.direccion}</td>
                         <td>{user.telefono}</td>
                         <td>{user.tipousuario}</td>
+                        <td>
+                        <Link to={{pathname:'/Detalleuser', state:{id:user.id}}}>
+                        <button type='button' className='btn btn-primary'>Detalle</button>
+                        </Link>
+                        <Link to={{pathname:'/Eliminauser', state:{id:user.id}}}>
+                        <button type='button' className='btn btn-danger'>Eliminar</button>
+                        </Link>
+                        </td>    
                     </tr>
                 );
             });
@@ -55,7 +62,7 @@ class Crudusers extends React.Component{
                             <div className='card'>
                                 <div className='card-header'>
                                     <h4>Gestion de usuarios
-                                        <Link to={'add-user'} className="btn btn-primary float-end">Agregar usuario</Link>
+                                        <Link to={'add-user'} className="btn btn-primary float-end">Agregar</Link>
                                     </h4>
                                 </div>
                                 <div className='card-body'>
@@ -66,9 +73,9 @@ class Crudusers extends React.Component{
                             <th scope="col">Imagen</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Correo</th>
-                            <th scope="col">Direccion</th>
                             <th scope="col">Telefono</th>
                             <th scope="col">Tipo de usuario</th>
+                            <th scope="col">Opciones</th>
 
                         </tr>
                         </thead>

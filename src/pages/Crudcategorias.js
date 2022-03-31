@@ -36,6 +36,11 @@ class Crudcategorias extends React.Component{
                     <tr key={i}>
                         <th scope="row">{i+1}</th>
                         <td>{categoria.nombre}</td>
+                        <td>
+                        <Link to={{pathname:'/Eliminacategoria', state:{id:categoria.id}}}>
+                        <button type='button' className='btn btn-danger'>Eliminar</button>
+                        </Link>
+                        </td>
                                             
                     </tr>
                 );
@@ -45,13 +50,13 @@ class Crudcategorias extends React.Component{
 
         return(
             <div>
+                <center>
                 <div className='container'>
-                    <div className='row'>
-                        <div className='col-md-12'>
+                        <div className='col-md-5'>
                             <div className='card'>
                                 <div className='card-header'>
                                     <h4>Gestion de categorias
-                                        <Link to={'add-categoria'} className="btn btn-primary float-end">Agregar categoria</Link>
+                                        <Link to={'add-categoria'} className="btn btn-primary float-end">Agregar</Link>
                                     </h4>
                                 </div>
                                 <div className='card-body'>
@@ -60,6 +65,7 @@ class Crudcategorias extends React.Component{
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nombre</th>
+                            <th scope="col">Opciones</th>
                             
                         </tr>
                         </thead>
@@ -70,8 +76,8 @@ class Crudcategorias extends React.Component{
                                 </div>
                             </div>
                         </div>                        
-                    </div>
                 </div>
+                </center>
             </div>
         )
     }
