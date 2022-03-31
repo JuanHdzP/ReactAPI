@@ -50,13 +50,14 @@ class Crudcategorias extends React.Component{
 
         return(
             <div>
-                <center>
                 <div className='container'>
-                        <div className='col-md-5'>
+                        <div className='col-md-5 mx-auto'>
                             <div className='card'>
                                 <div className='card-header'>
                                     <h4>Gestion de categorias
-                                        <Link to={'add-categoria'} className="btn btn-primary float-end">Agregar</Link>
+                                    <Link to={{pathname:'/Altacategoria'}}>
+                                    <button type='button' className='btn btn-success float-end'>Agregar</button>
+                                    </Link>
                                     </h4>
                                 </div>
                                 <div className='card-body'>
@@ -77,7 +78,6 @@ class Crudcategorias extends React.Component{
                             </div>
                         </div>                        
                 </div>
-                </center>
             </div>
         )
     }

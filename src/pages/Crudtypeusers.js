@@ -49,14 +49,14 @@ class Crudtypeusers extends React.Component{
 
         return(
             <div>
-                <center>
-
                 <div className='container'>
-                        <div className='col-md-5'>
+                        <div className='col-md-5 mx-auto'>
                             <div className='card'>
                                 <div className='card-header'>
-                                    <h4>Gestion de tipos de usuario
-                                        <Link to={'add-typeuser'} className="btn btn-primary float-end">Agregar</Link>
+                                <h4>Gestion de roles
+                                    <Link to={{pathname:'/Altatypeuser'}}>
+                                    <button type='button' className='btn btn-success float-end'>Agregar</button>
+                                    </Link>
                                     </h4>
                                 </div>
                                 <div className='card-body'>
@@ -77,7 +77,6 @@ class Crudtypeusers extends React.Component{
                             </div>
                         </div>                        
                     </div>
-                </center>
             </div>
         )
     }

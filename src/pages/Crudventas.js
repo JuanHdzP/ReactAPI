@@ -57,8 +57,10 @@ class Crudventas extends React.Component{
                         <div className='col-md-12'>
                             <div className='card'>
                                 <div className='card-header'>
-                                    <h4>Gestion de ventas
-                                        <Link to={'add-venta'} className="btn btn-primary float-end">Agregar</Link>
+                                <h4>Gestion de ventas
+                                    <Link to={{pathname:'/Altaventa'}}>
+                                    <button type='button' className='btn btn-success float-end'>Agregar</button>
+                                    </Link>
                                     </h4>
                                 </div>
                                 <div className='card-body'>

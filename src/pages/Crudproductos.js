@@ -57,11 +57,13 @@ class Crudproductos extends React.Component{
             <div>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-md-12'>
+                        <div className='col-md-10 mx-auto'>
                             <div className='card'>
                                 <div className='card-header'>
                                     <h4>Gestion de productos
-                                        <Link to={'add-producto'} className="btn btn-primary float-end">Agregar</Link>
+                                    <Link to={{pathname:'/Altaproducto'}}>
+                                    <button type='button' className='btn btn-success float-end'>Agregar</button>
+                                    </Link>
                                     </h4>
                                 </div>
                                 <div className='card-body'>
