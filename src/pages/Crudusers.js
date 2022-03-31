@@ -2,19 +2,19 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 
-class Crudcategorias extends React.Component{
+class Crudusers extends React.Component{
     
     state={
-        categorias:[],
+        users:[],
         loading: true,
     }
 
     async componentDidMount(){
-        const res = await axios.get('http://127.0.0.1:8000/api/categorias');
-        console.log(res); 
+        const res = await axios.get('http://127.0.0.1:8000/api/users');
+        //console.log(res); 
         if(res.data.status===200){
             this.setState({
-                categorias: res.data.categorias,
+                users: res.data.users,
                 loading: false,
             });
         }          
@@ -23,20 +23,24 @@ class Crudcategorias extends React.Component{
     
     render(){
         
-        var categoria_HTMLTABLE = "";
+        var user_HTMLTABLE = "";
         if(this.state.loading){
-            categoria_HTMLTABLE= 
+            user_HTMLTABLE= 
             <tr>
-                <td colSpan="3"><h3>Loading...</h3></td>
+                <td colSpan="7"><h3>Loading...</h3></td>
             </tr>;
         }else{
-            categoria_HTMLTABLE=
-            this.state.categorias.map((categoria,i)=>{
+            user_HTMLTABLE=
+            this.state.users.map((user,i)=>{
                 return (
                     <tr key={i}>
                         <th scope="row">{i+1}</th>
-                        <td>{categoria.nombre}</td>
-                                            
+                        <td><img src={user.img_perfil} className="rounded" height='80' width='80' alt='foto usuario'/></td>
+                        <td>{user.name}</td>
+                        <td>{user.email}</td>
+                        <td>{user.direccion}</td>
+                        <td>{user.telefono}</td>
+                        <td>{user.tipousuario}</td>
                     </tr>
                 );
             });
@@ -50,8 +54,8 @@ class Crudcategorias extends React.Component{
                         <div className='col-md-12'>
                             <div className='card'>
                                 <div className='card-header'>
-                                    <h4>Gestion de categorias
-                                        <Link to={'add-categoria'} className="btn btn-primary float-end">Agregar categoria</Link>
+                                    <h4>Gestion de usuarios
+                                        <Link to={'add-user'} className="btn btn-primary float-end">Agregar usuario</Link>
                                     </h4>
                                 </div>
                                 <div className='card-body'>
@@ -59,12 +63,17 @@ class Crudcategorias extends React.Component{
                     <thead>
                         <tr>
                             <th scope="col">#</th>
+                            <th scope="col">Imagen</th>
                             <th scope="col">Nombre</th>
-                            
+                            <th scope="col">Correo</th>
+                            <th scope="col">Direccion</th>
+                            <th scope="col">Telefono</th>
+                            <th scope="col">Tipo de usuario</th>
+
                         </tr>
                         </thead>
                         <tbody>
-                            {categoria_HTMLTABLE}
+                            {user_HTMLTABLE}
                         </tbody>
                 </table>
                                 </div>
@@ -76,4 +85,4 @@ class Crudcategorias extends React.Component{
         )
     }
 }
-export default Crudcategorias
+export default Crudusers
