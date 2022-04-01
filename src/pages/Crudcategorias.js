@@ -58,7 +58,9 @@ class Crudcategorias extends React.Component{
                             <div className='card'>
                                 <div className='card-header'>
                                     <h4>Gestion de categorias
-                                        <Link to={'add-categoria'} className="btn btn-primary float-end">Agregar</Link>
+                                    <Link to={{pathname:'/Altacategoria'}}>
+                                    <button type='button' className='btn btn-success float-end'>Agregar</button>
+                                    </Link> 
                                     </h4>
                                 </div>
                                 <div className='card-body'>
