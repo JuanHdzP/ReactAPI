@@ -41,7 +41,7 @@ class Altatypeuser extends React.Component{
                             <div className="card">
                                 <div className="card-header">
                                     <center>
-                                    <h4 >Alta categoria
+                                    <h4 >Alta rol
                                     <Link to={{pathname:'/Crudtypeusers'}}>
                                     <button type='button' className='btn btn-success float-end'>Volver</button>
                                     </Link></h4> 

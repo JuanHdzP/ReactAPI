@@ -5,29 +5,42 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class Login extends Component {
     render() {
         return (
-    <div className="containerPrincipal">
-        <div className="containerSecundario">
-          <div className="form-group">
-            <label>Correo Electronico: </label>
-            <br />
-            <input
-              type="text"
-              className="form-control"
-              name="username"
-            />
-            <br />
-            <label>Contraseña: </label>
-            <br />
-            <input
-              type="password"
-              className="form-control"
-              name="password"
-            />
-            <br />
-            <button className="btn btn-primary">Iniciar Sesión</button>
+          <div>
+            <div className="container">
+                        <div className="col-md-4 mx-auto">
+                            <div className="card">
+                                <div className="card-header">
+                                    <center>
+                                    <h4 >Login
+                                    </h4> 
+                                    </center>
+                                        
+                                </div>
+                                <div className="card-body">
+                                <form>                                   
+
+                                    <div className="form-group mb-3">
+                                        <label>Correo</label>
+                                        <input type='email' name="email" className="form-control"/>
+                                    </div>
+
+                                    <div className="form-group mb-3">
+                                        <label>Contraseña</label>
+                                        <input type='password' name="password" className="form-control" />
+                                    </div>
+                                    <center>
+                                    <div className="form-group mb-3">
+                                        <input type="submit" value="Iniciar sesion" className="btn btn-primary btn-lg"/>
+                                    </div>
+                                    </center>  
+                                    </form>      
+
+                                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
           </div>
-        </div>
-      </div>
         );
     }
 }
