@@ -15,8 +15,10 @@ function Navbar() {
         <h2>Taqueria <span>El Nene</span></h2>
         <div className={`links ${clicked ? 'active' : ''}`}>
           <a onClick={handleClick} href="/">Inicio</a>
-          <a onClick={handleClick} href="/Productos">Productos</a>
-          <a onClick={handleClick} href="/Contacto">Contacto</a>
+          <a onClick={handleClick} href="/Crudusers">Usuarios</a>
+          <a onClick={handleClick} href="/Crudproductos">Productos</a>
+          <a onClick={handleClick} href="/Crudcategorias">Categorias</a>
+          <a onClick={handleClick} href="/Crudtypeusers">Roles</a>
           <a onClick={handleClick} href="/Login">Iniciar Sesion</a>
           <a onClick={handleClick} href="/Register">Registrarse</a>
 
