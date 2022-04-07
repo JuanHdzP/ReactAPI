@@ -67,7 +67,7 @@ class Crudventas extends React.Component{
                                 <table className="table table-striped table-border table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">Num venta</th>
+                            <th scope="col" WIDTH="100">Num venta</th>
                             <th scope="col">Fecha</th>
                             <th scope="col">Total</th>
                             <th scope="col">Cliente</th>

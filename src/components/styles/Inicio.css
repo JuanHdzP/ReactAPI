@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+  }
+
+  .cardss {
+    text-align: center;
+    padding: 40px;
+    width: 350px;
+    border-radius: 55px;
+    padding: 1em;
+    box-shadow: rgba(99, 99, 99, 0.4) 1px 1px 4px 0px;
+  }
+ 
+  .txt{
+    text-align: center;
+  }

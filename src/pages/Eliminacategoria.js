@@ -27,10 +27,7 @@ class Eliminacategoria extends React.Component{
                 <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top"  />
                 <Card.Body>
-                    <Card.Title><h5>                     La categoria <strong>{this.state.categorias.nombre}</strong> ha sido eliminada                   
-</h5></Card.Title>
-              
-                   
+                    <Card.Title><h5>La categoria <strong>{this.state.categorias.nombre}</strong> ha sido eliminada</h5></Card.Title>                                 
                     <Link to = "/Crudcategorias">
                     <Button variant="success">Volver</Button>
                        {/*  <button type="button" className="btn btn-success">Volver</button> */}
@@ -38,9 +35,7 @@ class Eliminacategoria extends React.Component{
                 </Card.Body>
                 </Card>
                 </center>
-                </div>
-
-                
+                </div>                
         )
     }
 }

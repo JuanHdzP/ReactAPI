@@ -1,4 +1,6 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card , Button} from "react-bootstrap"
 import { Link } from "react-router-dom";
 
 class Eliminauser extends React.Component{
@@ -19,21 +21,21 @@ class Eliminauser extends React.Component{
     render(){
         return(
             <div>
-                <div><h2>Elimina usuario</h2></div>
-                <br/>
-                <div className="alert alert-success">
-                <center><strong>Successs!!</strong>
-                    <br/>
-                 El usuario <strong>{this.state.users.name}</strong>
-                    <br/>
-                    ha sido eliminado correctamente.</center>
-                </div>
-                <div>
+                <center>
+                <div><h2>Elimina usuario</h2></div>   
+                <br/>     
+                <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top"  />
+                <Card.Body>
+                    <Card.Title><h5>El usuario <strong>{this.state.users.name}</strong> ha sido eliminado</h5></Card.Title>                                 
                     <Link to = "/Crudusers">
-                        <button type="button" className="btn btn-success">Volver</button>
-                    </Link>
-                </div>
-            </div>
+                    <Button variant="success">Volver</Button>
+                       {/*  <button type="button" className="btn btn-success">Volver</button> */}
+                    </Link>                   
+                </Card.Body>
+                </Card>
+                </center>
+                </div>                
         )
     }
 }

@@ -1,4 +1,6 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card , Button} from "react-bootstrap"
 import { Link } from "react-router-dom";
 
 class Eliminatypeuser extends React.Component{
@@ -19,21 +21,21 @@ class Eliminatypeuser extends React.Component{
     render(){
         return(
             <div>
-                <div><h2>Elimina tipo de usuario</h2></div>
-                <br/>
-                <div className="alert alert-success">
-                <center><strong>Successs!!</strong>
-                    <br/>
-                 El tipo de usuario <strong>{this.state.typeusers.nombre}</strong>
-                    <br/>
-                    ha sido eliminado correctamente.</center>
-                </div>
-                <div>
+                <center>
+                <div><h2>Elimina rol</h2></div>   
+                <br/>     
+                <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top"  />
+                <Card.Body>
+                    <Card.Title><h5>El rol <strong>{this.state.typeusers.nombre}</strong> ha sido eliminado</h5></Card.Title>                                 
                     <Link to = "/Crudtypeusers">
-                        <button type="button" className="btn btn-success">Volver</button>
-                    </Link>
-                </div>
-            </div>
+                    <Button variant="success">Volver</Button>
+                       {/*  <button type="button" className="btn btn-success">Volver</button> */}
+                    </Link>                   
+                </Card.Body>
+                </Card>
+                </center>
+                </div>                
         )
     }
 }

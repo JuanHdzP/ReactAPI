@@ -28,6 +28,7 @@ import Navbar from "./Navbar";
 import Login from "../pages/Login"; 
 import Register from "../pages/Register"; 
 import Inicio from "../pages/Inicio";
+import Detalleproductoinicio from "../pages/Detalleproductoinicio";
 
 function Aplicacion(){
     return(
@@ -35,6 +36,7 @@ function Aplicacion(){
                 <Navbar/>
             <Switch>
                 <Route exact path="/" component={Inicio}/>   
+                <Route exact path="/Detalleproductoinicio" component={Detalleproductoinicio}/>   
                 <Route exact path="/Crudproductos" component={Crudproductos}/>   
                 <Route exact path="/Altaproducto" component={Altaproducto}/>   
                 <Route exact path="/Detalleproducto" component={Detalleproducto}/>   

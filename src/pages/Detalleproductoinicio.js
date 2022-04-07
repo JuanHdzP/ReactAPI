@@ -1,9 +1,10 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card , Button} from "react-bootstrap"
 import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card , Button} from "react-bootstrap";
 
-class Eliminaproducto extends React.Component{
+
+class Detalleproductoinicio extends React.Component{
     state={
         productos:[]
     }
@@ -12,31 +13,36 @@ class Eliminaproducto extends React.Component{
         fetch('http://127.0.0.1:8000/api/productos/'+this.props.location.state.id)
         .then(response=>response.json())
         .then(productosJson=>this.setState({productos:productosJson}))
-        
-        
-        fetch('http://127.0.0.1:8000/api/productos/'+this.props.location.state.id,
-        {method:'delete'});
     }
 
     render(){
+        const {productos}=this.state
         return(
             <div>
                 <center>
-                <div><h2>Elimina producto</h2></div>   
+                <div><h2>Detalle del producto</h2></div>   
                 <br/>     
                 <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top"  />
+                <Card.Img variant="top" src={productos.foto} />
                 <Card.Body>
-                    <Card.Title><h5>El producto <strong>{this.state.productos.nombre}</strong> ha sido eliminado</h5></Card.Title>                                 
-                    <Link to = "/Crudproductos">
+                    <Card.Title><h5>Nombre: {productos.nombre}</h5></Card.Title>
+                    <Card.Text>
+                    Precio: {productos.precio}
+                    </Card.Text>
+                    <Card.Text>
+                    Descripcion: {productos.descripcion}
+                    </Card.Text>
+                    <Link to = "/">
                     <Button variant="success">Volver</Button>
                        {/*  <button type="button" className="btn btn-success">Volver</button> */}
                     </Link>                   
                 </Card.Body>
                 </Card>
                 </center>
-                </div>                
+            </div>
+
+            
         )
     }
 }
-export default Eliminaproducto
+export default Detalleproductoinicio

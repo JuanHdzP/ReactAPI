@@ -1,12 +1,16 @@
 import React from "react";
-import Carousel from "../components/Carousel";
+import FeaturedProducts from "../components/FeaturedProducts";
+import '../components/styles/Inicio.css'
 
-const Inicio =()=>{
-    return(
+class Inicio extends React.Component{
+    render (){
+return(
         <div>
-            <Carousel/>            
+           <FeaturedProducts />  
         </div>
     )
+    }
+    
 }
 
 export default Inicio
