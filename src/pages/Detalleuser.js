@@ -20,7 +20,7 @@ class Detalleproducto extends React.Component{
         return(
             <div>
                 <center>
-                <div><h2>Detalle del usuario</h2></div>   
+                <div><h4>Detalle del usuario</h4></div>   
                 <br/>     
                 <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={users.img_perfil} />

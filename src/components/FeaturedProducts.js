@@ -35,7 +35,7 @@ class FeaturedProducts extends React.Component{
                 return (
                     <div className='cardss'>
                     <img src={producto.foto} height='150' width='150' alt='foto producto' />
-                    <h3>{producto.nombre}</h3>
+                    <h5>{producto.nombre}</h5>
                     <p>{producto.descripcion}</p>
                     <p>${producto.precio}</p>
                     <Link to={{pathname:'/Detalleproductoinicio', state:{id:producto.id}}}>
@@ -52,8 +52,8 @@ class FeaturedProducts extends React.Component{
             <div>
                 <div className='container'>
                         <div className='col-10 mx-auto'>
-                                    <h2 className='txt'>Productos                                    
-                                    </h2>
+                                    <h3 className='txt'>Productos                                    
+                                    </h3>
                                 <div className='item-container'>
                                     <div className='card-group'>
                             {producto_CARD}

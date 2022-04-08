@@ -22,7 +22,7 @@ class Eliminatypeuser extends React.Component{
         return(
             <div>
                 <center>
-                <div><h2>Elimina rol</h2></div>   
+                <div><h4>Elimina rol</h4></div>   
                 <br/>     
                 <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top"  />

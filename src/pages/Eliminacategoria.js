@@ -22,7 +22,7 @@ class Eliminacategoria extends React.Component{
         return(
             <div>
                 <center>
-                <div><h2>Elimina categoria</h2></div>   
+                <div><h4>Elimina categoria</h4></div>   
                 <br/>     
                 <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top"  />

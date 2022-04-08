@@ -22,7 +22,7 @@ class Eliminauser extends React.Component{
         return(
             <div>
                 <center>
-                <div><h2>Elimina usuario</h2></div>   
+                <div><h4>Elimina usuario</h4></div>   
                 <br/>     
                 <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top"  />

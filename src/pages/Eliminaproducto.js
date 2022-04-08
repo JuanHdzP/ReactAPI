@@ -22,7 +22,7 @@ class Eliminaproducto extends React.Component{
         return(
             <div>
                 <center>
-                <div><h2>Elimina producto</h2></div>   
+                <div><h4>Elimina producto</h4></div>   
                 <br/>     
                 <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top"  />

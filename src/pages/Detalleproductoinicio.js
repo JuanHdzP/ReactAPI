@@ -20,7 +20,7 @@ class Detalleproductoinicio extends React.Component{
         return(
             <div>
                 <center>
-                <div><h2>Detalle del producto</h2></div>   
+                <div><h4>Detalle del producto</h4></div>   
                 <br/>     
                 <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={productos.foto} />
