@@ -1,37 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class Modificacategoria extends React.Component{
+class Prueba extends React.Component{
     state={
         categorias:{
-            nombre:'',
+            nombre:'Prueba',
         },
         resultado:'', 
     }
 
-    handleChange = async e=>{
-        e.persist();
-        await this.setState({
-            categorias:{
-                ...this.state.categorias,
-                [e.target.name]:e.target.value
-            }
-        })   
-    }
-
     async componentDidMount(){
-            fetch('http://127.0.0.1:8000/api/categorias/'+this.props.location.state.id)
+            fetch('http://127.0.0.1:8000/api/categorias/'+6)
             .then(response=>response.json())
             .then(categoriasJson=>this.setState({categorias:categoriasJson}))
     }
 
-    subForm=async(e)=>{
+    subForm=(e)=>{
         e.preventDefault();
         let data= {
-            nombre:this.state.categorias.nombre,            
+            nombre:'Prueba',            
         };
 
-        fetch('http://127.0.0.1:8000/api/categorias/'+this.props.location.state.id,{
+        fetch('http://127.0.0.1:8000/api/categorias',{
             method:'PUT',
             headers:{
                 'Accept': 'application/json',
@@ -50,24 +40,11 @@ class Modificacategoria extends React.Component{
 
         return(
             <div>
-                <div className="container">
-                        <div className="col-md-4 mx-auto">
-                            <div className="card">
-                                <div className="card-header">
-                                    <center>
-                                    <h4 >Modificar categoria
-                                    <Link to={{pathname:'/Crudcategorias'}}>
-                                    <button type='button' className='btn btn-success float-end'>Volver</button>
-                                    </Link></h4> 
-                                    </center>
-                                        
-                                </div>
-                                <div className="card-body">
+<div className="card-body">
                                 <form onSubmit={this.subForm}>                                   
 
                                     <div className="form-group mb-3">
                                         <label>Nombre</label>
-                                        <input type='text' name="nombre" value={categorias.nombre} onChange={this.handleChange} className="form-control"/>
                                     </div>                                   
 
                                     <center>
@@ -85,12 +62,9 @@ class Modificacategoria extends React.Component{
                                 </center>
                                 
                                 </div>
-                            </div>
-                        </div>
-                    </div>             
             </div>
         )
     }
 }
 
-export default Modificacategoria
+export default Prueba

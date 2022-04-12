@@ -50,7 +50,7 @@ class Modificaproducto extends React.Component{
             categoria_id:this.state.productos.categoria_id,
         };
 
-        fetch('http://127.0.0.1:8000/api/productos',{
+        fetch('http://127.0.0.1:8000/api/productos/'+this.props.location.state.id,{
             method:'PUT',
             headers:{
                 'Accept': 'application/json',

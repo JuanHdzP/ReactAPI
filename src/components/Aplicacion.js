@@ -29,13 +29,15 @@ import Login from "../pages/Login";
 import Register from "../pages/Register"; 
 import Inicio from "../pages/Inicio";
 import Detalleproductoinicio from "../pages/Detalleproductoinicio";
+import Prueba from "../pages/Prueba";
 
 function Aplicacion(){
     return(
         <BrowserRouter>
-                <Navbar/>
+               {/*  <Navbar/> */}
             <Switch>
-                <Route exact path="/" component={Inicio}/>   
+                <Route exact path="/" component={Inicio}/>  
+                <Route exact path="/Prueba" component={Prueba}/>    
                 <Route exact path="/Detalleproductoinicio" component={Detalleproductoinicio}/>   
                 <Route exact path="/Crudproductos" component={Crudproductos}/>   
                 <Route exact path="/Altaproducto" component={Altaproducto}/>   
